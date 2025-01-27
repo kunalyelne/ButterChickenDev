@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f540fd6d80.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Butter Chicken Supremacy</title>
+    <style>
+        body {
+            font-family: 'Righteous', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffe8d6, #ffecd2);
+            cursor: url('img/chicken-cursor.png'), auto;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: #ff6f61;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffe8d6;
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+            align-items: center;
+            justify-content: center; /* Center-aligns content for smaller screens */
+            padding: 20px;
+            background: linear-gradient(120deg, #ff6f61, #ffa07a);
+            color: white;
+            min-height: 80vh;
+            text-align: center; /* Center-align text on smaller screens */
+        }
+
+        .hero .content {
+            max-width: 100%; /* Full width for smaller screens */
+        }
+
+        .hero .content h1 {
+            font-size: 4rem; /* Adjust heading size for smaller screens */
+        }
+
+        .hero .content p {
+            font-size: 1.5rem; /* Smaller font size for better readability */
+        }
+
+        .hero .image img {
+            width: 80%; /* Scale down the image for smaller screens */
+            max-width: 300px; /* Prevents the image from being too large */
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column; /* Stacks the content vertically */
+            }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .sections {
+            padding: 50px 10%;
+        }
+        .sections h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #ff6f61;
+        }
+        .sections .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .sections .card {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .sections .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .sections .card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ff6f61;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Butter Chicken Dev</div>
+        <ul>
+            <li><a href="#about">About</a></li>            
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="content">
+            <h1>Code Spicy, Serve Hot!</h1>
+            <p>Welcome to Butter Chicken Dev, where buttery smooth code meets spicy innovation. Let's spice up your tech world!</p>
+            <button onclick="location.href='#projects'" style="padding: 10px 20px; background: white; border: none; border-radius: 5px; color: #ff6f61; font-weight: bold; cursor: pointer;">Explore Recipes</button>
+        </div>
+        <div class="image">
+            <img src="img/butter-chicken.png" alt="Butter Chicken Illustration">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="sections">
+        <h2>About Me</h2>
+        <p>I'm a developer with a passion for crafting clean and flavorful code, just like the perfect butter chicken. I mix creativity, efficiency, and spice into every project I serve.</p>
+    </section>
+
+    <!-- Projects Section
+    <section id="projects" class="sections">
+        <h2>My Projects</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Spicy API Curry</h3>
+                <p>An API designed to add flavor to your applications.</p>
+            </div>
+            <div class="card">
+                <h3>Frontend Biryani</h3>
+                <p>A savory frontend project with a perfect blend of creativity and performance.</p>
+            </div>
+            <div class="card">
+                <h3>Serverless Naan</h3>
+                <p>A lightweight and flexible serverless solution.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="sections">
+        <h2>Contact</h2>
+        <p>Got a spicy idea? Let's collaborate! Reach me at <strong>hello@butterchicken.dev</strong>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Made with ❤️, humor, and an endless love for butter chicken.
+    </footer>
+</body>
+</html>
